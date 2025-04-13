@@ -83,6 +83,8 @@ typedef enum {
 class Builder {
 public:
     Builder(unsigned int spvVersion, unsigned int userNumber, SpvBuildLogger* logger);
+    Builder(Builder const&) = delete;
+    Builder(Builder &&) = delete;
     virtual ~Builder();
 
     static const int maxMatrixSize = 4;
